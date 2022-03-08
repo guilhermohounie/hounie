@@ -1,0 +1,21 @@
+FROM node:16
+
+WORKDIR /app
+
+COPY package.json yarn.lock /app/
+
+RUN yarn
+
+COPY . .
+
+RUN yarn prisma:generate
+
+ARG PORT DATABASE_URL NEXTAUTH_URL NEXTAUTH_URL_SECRET
+
+ENV PORT=$PORT DATABASE_URL=$DATABASE_URL NEXTAUTH_URL=$NEXTAUTH_URL NEXTAUTH_URL_SECRET=$NEXTAUTH_URL_SECRET
+
+EXPOSE $PORT
+
+RUN yarn build
+
+CMD [ "yarn", "start" ]
