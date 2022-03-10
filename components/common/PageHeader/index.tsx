@@ -1,0 +1,18 @@
+import type { FC } from "react";
+
+interface PageHeaderProps {
+  title: string;
+  description?: string;
+}
+
+export const PageHeader: FC<PageHeaderProps> = ({ title, description }) => {
+  return (
+    <header className="flex flex-col gap-4">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-4xl font-lora">{title}</h1>
+        {description && <p className="text-gray-700">{description}</p>}
+      </div>
+      <hr className="border border-black border-dashed" />
+    </header>
+  );
+};

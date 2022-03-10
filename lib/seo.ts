@@ -1,19 +1,19 @@
 import { DefaultSeoProps } from "next-seo";
 
 // Default SEO props
-export const DefaultSeo: DefaultSeoProps = {
-  titleTemplate: "%s | orichalcum",
-  defaultTitle: "Orichalcum",
+export const defaultSeo: DefaultSeoProps = {
+  titleTemplate: "%s",
+  defaultTitle: "Guilhermo Hounie",
   description: "web app template.",
   openGraph: {
     type: "website",
     url: "http://localhost:3000",
-    title: "orichalcum",
-    description: "weba app template.",
+    title: "Guilhermo Hounie",
+    description: "web app template.",
     images: [
       {
         url: "/og.png",
-        alt: "Orichalcum",
+        alt: "Guilhermo Hounie",
       },
     ],
   },
