@@ -6,31 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "lint": "next lint",
-    "prettier": "npx prettier --write .",
-    "prisma:generate": "npx prisma generate",
-    "prisma:format": "npx prisma format",
-    "prisma:migrate": "npx prisma migrate dev",
-    "prisma:studio": "npx prisma studio",
-    "prisma:seed": "npx prisma db seed",
-    "prisma:push": "npx prisma db push"
-  },
-  "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "prettier": "npx prettier --write ."
   },
   "dependencies": {
-    "@next-auth/prisma-adapter": "^1.0.1",
-    "@prisma/client": "^3.10.0",
+    "@mdx-js/react": "^2.0.0-rc.2",
+    "gray-matter": "^4.0.3",
     "next": "12.1.0",
-    "next-auth": "^4.2.1",
     "next-seo": "^5.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "sharp": "^0.30.2",
-    "swr": "^1.2.2"
+    "sharp": "^0.30.2"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^2.0.0-rc.2",
+    "@tailwindcss/typography": "^0.5.2",
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
     "autoprefixer": "^10.4.2",
@@ -40,9 +32,8 @@
     "postcss": "^8.4.8",
     "prettier": "^2.5.1",
     "prettier-plugin-organize-imports": "^2.3.4",
-    "prisma": "^3.10.0",
+    "remark-frontmatter": "^4.0.1",
     "tailwindcss": "^3.0.23",
-    "ts-node": "^10.7.0",
     "typescript": "4.6.2"
   }
 }

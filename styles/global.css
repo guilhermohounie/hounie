@@ -1,9 +1,0 @@
-@tailwind utilities;
-@tailwind base;
-@tailwind components;
-
-@font-face {
-  font-family: "Lora";
-  src: url("/assets/fonts/Lora-Regular.ttf") format("ttf");
-  font-weight: 400 700;
-}
