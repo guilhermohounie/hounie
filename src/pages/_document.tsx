@@ -5,7 +5,7 @@ const Document: FC<DocumentProps> = () => {
   return (
     <Html dir="ltr" lang="en">
       <Head />
-      <body className="bg-gray-50">
+      <body>
         <Main />
         <NextScript />
       </body>

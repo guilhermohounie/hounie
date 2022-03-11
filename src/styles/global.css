@@ -8,8 +8,8 @@
   font-weight: 400 700;
 }
 
-* {
-  text-decoration-color: rgba(225, 29, 72, 1);
+body {
+  @apply bg-gray-50 dark:bg-beaver-900;
 }
 
 h1,
@@ -46,5 +46,5 @@ h6 {
 }
 
 p {
-  @apply text-gray-700;
+  @apply text-gray-700 dark:text-gray-400;
 }
