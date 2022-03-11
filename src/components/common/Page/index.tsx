@@ -9,7 +9,7 @@ export const Page: FC<PageProps> = ({ children, ...props }) => {
   return (
     <Fragment>
       <NextSeo {...defaultSeo} {...props} />
-      <div className="relative flex flex-col max-w-screen-sm min-h-screen px-4 pt-16 mx-auto selection:bg-rose-400 selection:text-white">
+      <div className="relative flex flex-col max-w-screen-md min-h-screen px-4 pt-16 mx-auto selection:bg-rose-400 selection:text-white">
         <div className="flex flex-col flex-1 pb-32">{children}</div>
         <Dock />
       </div>

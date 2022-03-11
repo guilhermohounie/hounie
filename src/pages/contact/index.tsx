@@ -10,7 +10,7 @@ const ContactPage: NextPage = () => {
         <p>
           If you ever want to contact me for professional stuff you can reach me at{" "}
           <a href="mailto:hounie.guilhermo@gmail.com" className="font-semibold underline">
-            hounie.guilhermo@gmail.com
+            my contact email
           </a>{" "}
           <span role="img" aria-label="Wink Emoni">
             😉

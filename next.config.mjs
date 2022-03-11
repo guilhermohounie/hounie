@@ -20,6 +20,9 @@ const config = {
   },
   reactStrictMode: true,
   pageExtensions: ["js", "jsx", "tsx", "ts", "md", "mdx"],
+  experimental: {
+    outputStandalone: true,
+  },
 };
 
 export default config;
