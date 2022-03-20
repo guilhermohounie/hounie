@@ -1,4 +1,5 @@
 import type { ArticleMetadata } from "@/types/mdx";
+import { toBlurHash } from "@/utils/blurhash";
 import Image from "next/image";
 import type { FC } from "react";
 
@@ -7,7 +8,8 @@ interface ArticleLayoutProps {
 }
 
 export const ArticleLayout: FC<ArticleLayoutProps> = ({ metadata, children }) => {
-  const { date, description, title, cover } = metadata;
+  const { date, description, title, cover, blur } = metadata;
+
   return (
     <section>
       <div className="flex flex-col gap-4">
@@ -23,6 +25,8 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({ metadata, children }) =>
             height={400}
             width={640}
             layout="responsive"
+            placeholder="blur"
+            blurDataURL={toBlurHash(blur)}
             className="object-cover"
           />
         </div>
