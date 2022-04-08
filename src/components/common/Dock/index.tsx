@@ -9,7 +9,6 @@ import {
   FaHome,
   FaKeyboard,
   FaMoon,
-  FaPenAlt,
   FaSun,
 } from "react-icons/fa";
 
@@ -18,23 +17,23 @@ export const Dock: FC = () => {
     <footer className="fixed z-10 flex items-end justify-center bottom-8 inset-x-4">
       <ul className="flex gap-2 px-4 py-2 overflow-x-scroll bg-white border border-gray-400 rounded-3xl bg-opacity-60 backdrop-blur-sm dark:bg-beaver-900 dark:border-gray-800">
         <li>
-          <DockLink href="/" label="homepage">
+          <DockLink href="/" label="inicio">
             <FaHome size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink href="/articles" label="articles">
-            <FaPenAlt size={24} />
-          </DockLink>
-        </li>
-        <li>
-          <DockLink href="/projects" label="projects">
+          <DockLink href="/projects" label="projetos">
             <FaKeyboard size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink href="/dictionary" label="dictionary">
+          <DockLink href="/dictionary" label="dicionário">
             <FaBook size={24} />
+          </DockLink>
+        </li>
+        <li>
+          <DockLink href="/contact" label="contato">
+            <FaEnvelopeOpenText size={24} />
           </DockLink>
         </li>
         <li>
@@ -46,11 +45,7 @@ export const Dock: FC = () => {
             <FaFileContract size={24} />
           </DockLink>
         </li>
-        <li>
-          <DockLink href="/contact" label="contact">
-            <FaEnvelopeOpenText size={24} />
-          </DockLink>
-        </li>
+
         <li>
           <DockLink href="https://github.com/guilhermohounie" label="github" isExternal>
             <FaGithub size={24} />

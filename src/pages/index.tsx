@@ -22,20 +22,18 @@ const IndexPage: NextPage = () => {
           <hr className="w-32 h-px bg-gray-400 border-none" />
           <div className="grid gap-4">
             <p>
-              Hi, I'm Guilhermo Hounie. I'm a computer science student, Web Developer and many
-              things enthusiast. I try to explain things and make sense of the world around me
-              with code.
+              Ola, eu sou Guilhermo Hounie. Sou estudante de ciência da computação,
+              desenvolvedor web e entusiasta em muitas coisas. Tento explicar o mundo ao meu
+              redor através de código.
             </p>
             <p>
-              I love the web and its core tools. My goal is to contribute in the creation of
-              awesome applications while also making the web a fun place.
+              Eu amo a web e suas tecnologias, meu objetivo é contribuir para a criação de
+              aplicações incríveis enquanto ajudo a tornar a web um lugar melhor.
             </p>
+            <p>Sou um minimalista, amante de computação retro, future funk, jazz e gatos.</p>
             <p>
-              I'm a minimalist, lover of all things retro computing, future funk, jazz and cats.
-            </p>
-            <p>
-              I love the sun and nature, I love to walk and my favorite food is japanese. My
-              dream is to live in peace and harmony with myself and the things around me.
+              Eu amo o sol e natureza, eu amo caminhar e minha comida favorita é sushi. Meu
+              sonho é viver em paz e harmonia comigo mesmo e com todas as coisas ao meu redor.
             </p>
           </div>
         </div>

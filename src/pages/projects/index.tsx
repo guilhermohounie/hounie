@@ -4,8 +4,8 @@ import type { NextPage } from "next";
 
 const ProjectsPage: NextPage = () => {
   return (
-    <Page title="Projects">
-      <PageHeader title="[Projects.]" description="You gotta have some." />
+    <Page title="Projetos">
+      <PageHeader title="[Projetos.]" description="Em breve." />
       <main></main>
     </Page>
   );

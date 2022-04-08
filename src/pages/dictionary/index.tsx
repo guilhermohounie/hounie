@@ -6,8 +6,8 @@ import type { NextPage } from "next";
 
 const DictionaryPage: NextPage = () => {
   return (
-    <Page title="Dictionary">
-      <PageHeader title="[Dictionary.]" />
+    <Page title="Dicionário">
+      <PageHeader title="[Dicionário.]" />
       <main className="py-8">
         <ul className="grid gap-8 md:grid-cols-2">
           {dictionary.map((entry) => {

@@ -1,5 +1,4 @@
 import "@/styles/global.css";
-import "@/styles/post.css";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import type { FC } from "react";
