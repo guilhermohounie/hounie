@@ -22,7 +22,7 @@ const IndexPage: NextPage = () => {
           <hr className="w-32 h-px bg-gray-400 border-none" />
           <div className="grid gap-4">
             <p>
-              Ola, eu sou Guilhermo Hounie. Sou estudante de ciência da computação,
+              Olá, eu sou Guilhermo Hounie. Sou estudante de ciência da computação,
               desenvolvedor web e entusiasta em muitas coisas. Tento explicar o mundo ao meu
               redor através de código.
             </p>
