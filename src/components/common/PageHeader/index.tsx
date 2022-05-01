@@ -12,7 +12,7 @@ export const PageHeader: FC<PageHeaderProps> = ({ title, description }) => {
         <h2>{title}</h2>
         {description && <p>{description}</p>}
       </div>
-      <hr className="border border-black border-dashed dark:border-white" />
+      <hr className="border border-white border-dashed" />
     </header>
   );
 };

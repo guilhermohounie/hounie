@@ -8,8 +8,13 @@
   font-weight: 400 700;
 }
 
+* {
+  @apply selection:bg-orange-400 selection:text-white
+}
+
+
 body {
-  @apply bg-gray-50 dark:bg-beaver-900;
+  @apply bg-dark;
 }
 
 h1,
@@ -18,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-black font-lora dark:text-white;
+  @apply  text-white font-lora;
 }
 
 h1 {
@@ -46,5 +51,5 @@ h6 {
 }
 
 p {
-  @apply text-gray-700 dark:text-gray-400;
+  @apply text-gray-500;
 }
