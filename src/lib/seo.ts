@@ -4,12 +4,12 @@ import { DefaultSeoProps } from "next-seo";
 export const defaultSeo: DefaultSeoProps = {
   titleTemplate: "%s",
   defaultTitle: "Guilhermo Hounie",
-  description: "O espaço pessoal de Guilhermo Hounie na web.",
+  description: "Guilhermo Hounie's personal webspace.",
   openGraph: {
     type: "website",
     url: "http://hounie.me",
     title: "Guilhermo Hounie",
-    description: "O espaço pessoal de Guilhermo Hounie na web.",
+    description: "Guilhermo Hounie's personal webspace.",
     images: [
       {
         url: "/og.png",

@@ -6,8 +6,8 @@ import type { NextPage } from "next";
 
 const ProjectsPage: NextPage = () => {
   return (
-    <Page title="Projetos">
-      <PageHeader title="[Projetos.]" description="Em breve." />
+    <Page title="Projects">
+      <PageHeader title="[Projects.]" description="gotta have some." />
       <main className="py-8">
         <ul className="grid gap-8 md:grid-cols-2">
           {projects.map((entry) => {

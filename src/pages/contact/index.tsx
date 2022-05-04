@@ -4,16 +4,16 @@ import type { NextPage } from "next";
 
 const ContactPage: NextPage = () => {
   return (
-    <Page title="Contato">
-      <PageHeader title="[Entre em contato.]" />
+    <Page title="Contact">
+      <PageHeader title="[Contact.]" />
       <main className="py-8">
         <p>
-          Se você tem interesse em me contatar para coisas profissionais, pode me alcançar em{" "}
+          If you are interested in contacting me for professional stuff, you can reach me at{" "}
           <a
             href="mailto:hounie.guilhermo@gmail.com"
-            className="font-semibold underline text-orange-400"
+            className="font-semibold text-orange-400 underline"
           >
-            meu e-mail
+            my email
           </a>{" "}
           <span role="img" aria-label="Wink Emoji">
             😉

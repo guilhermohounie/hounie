@@ -14,22 +14,22 @@ export const Dock: FC = () => {
     <footer className="fixed z-10 flex items-end justify-center bottom-8 inset-x-4">
       <ul className="flex gap-2 px-4 py-2 overflow-x-scroll rounded-3xl bg-opacity-80 backdrop-blur-sm bg-dark">
         <li>
-          <DockLink href="/" label="inicio">
+          <DockLink href="/" label="Home">
             <FaHome size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink href="/projects" label="projetos">
+          <DockLink href="/projects" label="Projects">
             <FaKeyboard size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink href="/dictionary" label="dicionário">
+          <DockLink href="/dictionary" label="Dictionary">
             <FaBook size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink href="/contact" label="contato">
+          <DockLink href="/contact" label="Contact">
             <FaEnvelopeOpenText size={24} />
           </DockLink>
         </li>

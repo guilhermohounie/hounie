@@ -13,18 +13,17 @@ const IndexPage: NextPage = () => {
           <hr className="w-32 border border-orange-400" />
           <div className="grid gap-4">
             <p>
-              Olá, eu sou Guilhermo Hounie. Sou estudante de ciência da computação,
-              desenvolvedor web e entusiasta em muitas coisas. Tento explicar o mundo ao meu
-              redor através de código.
+              Hello, I'm Guilhermo Hounie. I'm a computer science student, web developer and
+              enthusiast in many things. I try to explain the world to my around through code.
             </p>
             <p>
-              Eu amo a web e suas tecnologias, meu objetivo é contribuir para a criação de
-              aplicações incríveis enquanto ajudo a tornar a web um lugar melhor.
+              I love the web and its technologies, my goal is to contribute to the creation of
+              amazing applications while helping to make the web a better place.
             </p>
-            <p>Sou um minimalista, amante de computação retro, future funk, jazz e gatos.</p>
+            <p>I'm a minimalist, lover of retro computing, future funk, jazz and cats.</p>
             <p>
-              Eu amo o sol e natureza, eu amo caminhar e minha comida favorita é sushi. Meu
-              sonho é viver em paz e harmonia comigo mesmo e com todas as coisas ao meu redor.
+              I love the sun and nature, I love hiking and my favorite food is sushi. Mine dream
+              is to live in peace and harmony with myself and all things around me.
             </p>
           </div>
         </div>
