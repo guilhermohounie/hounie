@@ -14,37 +14,38 @@ export const Dock: FC = () => {
     <footer className="fixed z-10 flex items-end justify-center bottom-8 inset-x-4">
       <ul className="flex gap-2 px-4 py-2 overflow-x-scroll rounded-3xl bg-opacity-80 backdrop-blur-sm bg-dark">
         <li>
-          <DockLink href="/" label="Home">
+          <DockLink href="/" label="Home" title="Home">
             <FaHome size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink href="/projects" label="Projects">
+          <DockLink href="/projects" label="Projects" title="Projects">
             <FaKeyboard size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink href="/dictionary" label="Dictionary">
+          <DockLink href="/dictionary" label="Dictionary" title="Dictionary">
             <FaBook size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink href="/contact" label="Contact">
+          <DockLink href="/contact" label="Contact" title="Contact">
             <FaEnvelopeOpenText size={24} />
           </DockLink>
         </li>
         <li>
-          <DockLink
-            href="https://guilhermohounie.notion.site/Curr-culo-06a3c33245b243398acdbab7a88462cb"
-            isExternal
-            label="cv"
-          >
+          <DockLink href="/assets/cv.pdf" isExternal label="CV" title="CV">
             <FaFileContract size={24} />
           </DockLink>
         </li>
 
         <li>
-          <DockLink href="https://github.com/guilhermohounie" label="github" isExternal>
+          <DockLink
+            href="https://github.com/guilhermohounie"
+            label="Github"
+            isExternal
+            title="Github (external)"
+          >
             <FaGithub size={24} />
           </DockLink>
         </li>
@@ -60,9 +61,10 @@ interface DockLinkProps {
   isExternal?: boolean;
   href: string;
   label: string;
+  title: string;
 }
 
-const DockLink: FC<DockLinkProps> = ({ href, isExternal = false, children, label }) => {
+const DockLink: FC<DockLinkProps> = ({ href, isExternal = false, children, label, title }) => {
   if (isExternal) {
     return (
       <a
@@ -71,6 +73,7 @@ const DockLink: FC<DockLinkProps> = ({ href, isExternal = false, children, label
         href={href}
         target="_blank"
         rel="noreferrer"
+        title={title}
       >
         {children}
       </a>
@@ -79,7 +82,7 @@ const DockLink: FC<DockLinkProps> = ({ href, isExternal = false, children, label
 
   return (
     <Link href={href}>
-      <a aria-label={label} className={dockItemClassName}>
+      <a aria-label={label} className={dockItemClassName} title={title}>
         {children}
       </a>
     </Link>
