@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/components/**/*.tsx", "./src/pages/**/*.tsx"],
+  content: ["./src/**/*.tsx"],
   darkMode: "class",
   theme: {
     extend: {
@@ -37,4 +37,5 @@ module.exports = {
       },
     },
   },
+  plugins: [require("@tailwindcss/typography")],
 };

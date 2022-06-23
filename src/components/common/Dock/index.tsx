@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC, ReactNode } from "react";
 import {
   FaBook,
   FaEnvelopeOpenText,
@@ -8,17 +8,18 @@ import {
   FaGithub,
   FaHome,
   FaKeyboard,
+  FaPencilAlt,
 } from "react-icons/fa";
 
-export const Dock: FC = () => {
-  const animation = {
-    initial: { opacity: 0, y: 10 },
-    animate: { opacity: 1, y: 0 },
-    transition: (i: number) => {
-      return { delay: 0.3 * i, duration: 1.2 };
-    },
-  };
+const animation = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  transition: (i: number) => {
+    return { delay: 0.3 * i, duration: 1 };
+  },
+};
 
+export const Dock: FC = () => {
   return (
     <footer className="fixed z-10 flex items-end justify-center bottom-8 inset-x-4">
       <motion.ul className="flex gap-2 px-4 py-2 overflow-x-scroll rounded-3xl bg-opacity-80 backdrop-blur-sm bg-dark">
@@ -36,6 +37,15 @@ export const Dock: FC = () => {
           initial={animation.initial}
           transition={animation.transition(0.4)}
         >
+          <DockLink href="/writings" label="Writings" title="Writings">
+            <FaPencilAlt size={24} />
+          </DockLink>
+        </motion.li>
+        <motion.li
+          animate={animation.animate}
+          initial={animation.initial}
+          transition={animation.transition(0.6)}
+        >
           <DockLink href="/projects" label="Projects" title="Projects">
             <FaKeyboard size={24} />
           </DockLink>
@@ -43,7 +53,7 @@ export const Dock: FC = () => {
         <motion.li
           animate={animation.animate}
           initial={animation.initial}
-          transition={animation.transition(0.6)}
+          transition={animation.transition(0.8)}
         >
           <DockLink href="/dictionary" label="Dictionary" title="Dictionary">
             <FaBook size={24} />
@@ -52,7 +62,7 @@ export const Dock: FC = () => {
         <motion.li
           animate={animation.animate}
           initial={animation.initial}
-          transition={animation.transition(0.8)}
+          transition={animation.transition(1)}
         >
           <DockLink href="/contact" label="Contact" title="Contact">
             <FaEnvelopeOpenText size={24} />
@@ -61,7 +71,7 @@ export const Dock: FC = () => {
         <motion.li
           animate={animation.animate}
           initial={animation.initial}
-          transition={animation.transition(1)}
+          transition={animation.transition(1.2)}
         >
           <DockLink href="/assets/cv.pdf" isExternal label="CV" title="CV">
             <FaFileContract size={24} />
@@ -70,7 +80,7 @@ export const Dock: FC = () => {
         <motion.li
           animate={animation.animate}
           initial={animation.initial}
-          transition={animation.transition(1.2)}
+          transition={animation.transition(1.4)}
         >
           <DockLink
             href="https://github.com/guilhermohounie"
@@ -94,6 +104,7 @@ interface DockLinkProps {
   href: string;
   label: string;
   title: string;
+  children: ReactNode;
 }
 
 const DockLink: FC<DockLinkProps> = ({ href, isExternal = false, children, label, title }) => {

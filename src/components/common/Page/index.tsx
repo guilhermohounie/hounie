@@ -1,8 +1,11 @@
 import { defaultSeo } from "@/lib/seo";
 import { NextSeo, NextSeoProps } from "next-seo";
-import { FC, Fragment } from "react";
+import type { FC, ReactNode } from "react";
+import { Fragment } from "react";
 
-interface PageProps extends NextSeoProps {}
+interface PageProps extends NextSeoProps {
+  children: ReactNode;
+}
 
 export const Page: FC<PageProps> = ({ children, ...props }) => {
   return (
