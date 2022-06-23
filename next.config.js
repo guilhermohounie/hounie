@@ -3,6 +3,7 @@
  */
 const config = {
   reactStrictMode: true,
+
   experimental: {
     outputStandalone: true,
   },

@@ -5,7 +5,7 @@ import path from "path";
 
 const ROOT = process.cwd();
 
-const writingsPath = path.join(ROOT, "src", "writings");
+const writingsPath = path.join(ROOT, "src/writings");
 
 export function getAllWritings() {
   const files = fs.readdirSync(writingsPath);
