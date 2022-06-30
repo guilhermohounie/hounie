@@ -49,10 +49,10 @@ const WritingPage: FC<WritingPageProps> = ({ writing }) => {
     <Page title={title} description={description}>
       <div className="pb-4 border-b-2 border-white border-dashed">
         <span className="text-sm text-gray-600">{date}</span>
-        <h1 className="text-orange-400">{writing.title}</h1>
-        <p>{writing.description}</p>
+        <h1 className="mt-4">{writing.title}</h1>
+        <p className="text-lg">{writing.description}</p>
       </div>
-      <article className="!max-w-full mt-12 prose prose-invert prose-headings:text-orange-400">
+      <article className="!max-w-full mt-12 prose prose-invert prose-headings:text-primary">
         <MDXRemote {...content} />
       </article>
     </Page>

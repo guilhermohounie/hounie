@@ -9,11 +9,11 @@
 }
 
 * {
-  @apply selection:bg-orange-400 selection:text-white;
+  @apply selection:bg-primary selection:text-black;
 }
 
 body {
-  @apply bg-dark;
+  @apply bg-black;
 }
 
 h1,
@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-white font-lora;
+  @apply text-primary font-lora;
 }
 
 h1 {

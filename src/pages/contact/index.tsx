@@ -11,7 +11,7 @@ const ContactPage: NextPage = () => {
           If you are interested in contacting me for professional stuff, you can reach me at{" "}
           <a
             href="mailto:hounie.guilhermo@gmail.com"
-            className="font-semibold text-orange-400 underline"
+            className="font-semibold underline text-primary"
           >
             my email
           </a>{" "}

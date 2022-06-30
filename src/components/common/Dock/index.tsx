@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
+import NextLink from "next/link";
 import type { FC, ReactNode } from "react";
 import {
   FaBook,
@@ -22,7 +22,7 @@ const animation = {
 export const Dock: FC = () => {
   return (
     <footer className="fixed z-10 flex items-end justify-center bottom-8 inset-x-4">
-      <motion.ul className="flex gap-2 px-4 py-2 overflow-x-scroll rounded-3xl bg-opacity-80 backdrop-blur-sm bg-dark">
+      <motion.ul className="flex gap-2 px-4 py-2 overflow-x-scroll bg-black rounded-3xl bg-opacity-60 backdrop-blur-sm">
         <motion.li
           animate={animation.animate}
           initial={animation.initial}
@@ -108,26 +108,16 @@ interface DockLinkProps {
 }
 
 const DockLink: FC<DockLinkProps> = ({ href, isExternal = false, children, label, title }) => {
-  if (isExternal) {
-    return (
-      <a
-        aria-label={label}
-        className={dockItemClassName}
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        title={title}
-      >
-        {children}
-      </a>
-    );
-  }
-
   return (
-    <Link href={href}>
-      <a aria-label={label} className={dockItemClassName} title={title}>
-        {children}
-      </a>
-    </Link>
+    <NextLink
+      href={href}
+      target={isExternal ? "_blank" : "_self"}
+      rel={isExternal ? "noopener noreferrer" : ""}
+      aria-label={label}
+      className={dockItemClassName}
+      title={title}
+    >
+      {children}
+    </NextLink>
   );
 };

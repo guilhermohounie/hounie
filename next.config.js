@@ -6,6 +6,7 @@ const config = {
 
   experimental: {
     outputStandalone: true,
+    newNextLinkBehavior: true,
   },
 };
 

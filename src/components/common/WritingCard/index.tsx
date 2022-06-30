@@ -12,8 +12,8 @@ export const WritingCard: FC<WritingCardProps> = ({ writing }) => {
     <li className="p-4 border-l-2 border-white border-dashed">
       <span className="text-sm text-gray-600">{date}</span>
       <h4>
-        <NextLink href={`/writings/${slug}`}>
-          <a className="text-orange-400 underline">{title}</a>
+        <NextLink href={`/writings/${slug}`} className="underline">
+          {title}
         </NextLink>
       </h4>
       <p>{description}</p>

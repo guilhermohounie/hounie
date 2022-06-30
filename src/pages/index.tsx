@@ -8,9 +8,8 @@ const IndexPage: NextPage = () => {
         <div className="flex flex-col gap-4">
           <div>
             <h3>Guilhermo Hounie</h3>
-            <p>Cyberspace Homeboy.</p>
           </div>
-          <hr className="w-32 border border-orange-400" />
+          <hr className="w-32 border border-primary" />
           <div className="grid gap-4">
             <p>
               Hello, I'm Guilhermo Hounie. I'm a computer science student, web developer and
