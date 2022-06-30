@@ -3,9 +3,8 @@
  */
 const config = {
   reactStrictMode: true,
-
+  output: "standalone",
   experimental: {
-    outputStandalone: true,
     newNextLinkBehavior: true,
   },
 };
