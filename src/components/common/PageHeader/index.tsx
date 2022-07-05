@@ -7,12 +7,9 @@ interface PageHeaderProps {
 
 export const PageHeader: FC<PageHeaderProps> = ({ title, description }) => {
   return (
-    <header className="flex flex-col gap-4">
-      <div className="flex flex-col gap-2">
-        <h2>{title}</h2>
-        {description && <p>{description}</p>}
-      </div>
-      <hr className="border border-white border-dashed" />
+    <header className="flex flex-col gap-2">
+      <h2>{title}</h2>
+      {description && <p>{description}</p>}
     </header>
   );
 };

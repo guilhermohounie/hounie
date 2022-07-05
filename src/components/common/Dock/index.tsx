@@ -97,7 +97,7 @@ export const Dock: FC = () => {
 };
 
 const dockItemClassName =
-  "block p-2 text-gray-600 transition duration-300 ease-in-out rounded-xl hover:scale-110 border border-gray-800 w-10 h-10 flex items-center justify-center";
+  "block p-2 text-gray-600 transition duration-300 ease-in-out rounded-2xl hover:scale-110 border border-gray-800 w-10 h-10 flex items-center justify-center";
 
 interface DockLinkProps {
   isExternal?: boolean;
