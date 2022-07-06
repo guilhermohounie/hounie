@@ -4,7 +4,6 @@ import type { FC, ReactNode } from "react";
 import {
   FaBook,
   FaEnvelopeOpenText,
-  FaFileContract,
   FaGithub,
   FaHome,
   FaKeyboard,
@@ -66,15 +65,6 @@ export const Dock: FC = () => {
         >
           <DockLink href="/contact" label="Contact" title="Contact">
             <FaEnvelopeOpenText size={24} />
-          </DockLink>
-        </motion.li>
-        <motion.li
-          animate={animation.animate}
-          initial={animation.initial}
-          transition={animation.transition(1.2)}
-        >
-          <DockLink href="/assets/cv.pdf" isExternal label="CV" title="CV">
-            <FaFileContract size={24} />
           </DockLink>
         </motion.li>
         <motion.li
