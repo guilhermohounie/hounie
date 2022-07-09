@@ -43,16 +43,15 @@ interface WritingPageProps {
 }
 
 const WritingPage: FC<WritingPageProps> = ({ writing }) => {
-  const { content, date, description, slug, tags, title } = writing;
+  const { content, date, description, title } = writing;
 
   return (
-    <Page title={title} description={description}>
-      <div className="pb-4 border-b-2 border-white border-dashed">
+    <Page title={title} description={description} openGraph={{ title, description }}>
+      <div>
         <span className="text-sm text-gray-600">{date}</span>
-        <h1 className="mt-4">{writing.title}</h1>
-        <p className="text-lg">{writing.description}</p>
+        <h1 className="mt-2 mb-1">{writing.title}</h1>
       </div>
-      <article className="!max-w-full mt-12 prose prose-invert prose-headings:text-primary">
+      <article className="!max-w-full mt-12 prose prose-invert prose-headings:text-primary prose-a:text-primary">
         <MDXRemote {...content} />
       </article>
     </Page>

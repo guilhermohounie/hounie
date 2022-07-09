@@ -4,7 +4,9 @@ import type { FC } from "react";
 const NotFoundPage: FC = () => {
   return (
     <Page title="Nothing to see here.">
-      <h3>There is nothing to see here.</h3>
+      <main>
+        <h3>There is nothing to see here.</h3>
+      </main>
     </Page>
   );
 };

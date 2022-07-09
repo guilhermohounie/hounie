@@ -18,11 +18,9 @@ export function getAllWritings() {
     return { ...data, slug: file.replace(".mdx", "") } as WritingMetadata;
   });
 
-  return metadatas
-    .sort((a, b) => {
-      return a.date < b.date ? 1 : -1;
-    })
-    .reverse();
+  return metadatas.sort((a, b) => {
+    return a.date < b.date ? 1 : -1;
+  });
 }
 
 export function getWriting(filename: string) {
