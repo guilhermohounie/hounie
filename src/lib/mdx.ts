@@ -18,9 +18,11 @@ export function getAllWritings() {
     return { ...data, slug: file.replace(".mdx", "") } as WritingMetadata;
   });
 
-  return metadatas.sort((a, b) => {
-    return a.date < b.date ? 1 : -1;
-  });
+  return metadatas
+    .sort((a, b) => {
+      return a.date < b.date ? 1 : -1;
+    })
+    .filter((metadata) => (process.env.NODE_ENV === "development" ? true : metadata.published));
 }
 
 export function getWriting(filename: string) {

@@ -12,8 +12,8 @@ const IndexPage: NextPage = () => {
         <h2>Guilhermo Hounie</h2>
         <div className="grid gap-4">
           <p>
-            Hello, I'm Guilhermo Hounie. I'm a computer science student, web developer and
-            enthusiast in many things. I try to explain the world around me with code.
+            Hello, I'm Guilhermo Hounie. I'm a computer scientist, web developer and enthusiast
+            in many things. I try to explain the world around me with code.
           </p>
           <p>
             I love the web and its technologies, my goal is to contribute to the creation of

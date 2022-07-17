@@ -46,9 +46,23 @@ const WritingPage: FC<WritingPageProps> = ({ writing }) => {
   const { content, date, description, title } = writing;
 
   return (
-    <Page title={title} description={description} openGraph={{ title, description }}>
+    <Page
+      title={title}
+      description={description}
+      openGraph={{ title, description }}
+      twitter={{
+        cardType: "summary_large_image",
+        site: "https://www.hounie.me",
+      }}
+    >
       <div>
-        <span className="text-sm text-gray-600">{date}</span>
+        <span className="text-sm text-gray-600">
+          {new Date(date).toLocaleDateString("en-US", {
+            month: "long",
+            year: "numeric",
+            day: "numeric",
+          })}
+        </span>
         <h1 className="mt-2 mb-1">{writing.title}</h1>
       </div>
       <article className="!max-w-full mt-12 prose prose-invert prose-headings:text-primary prose-a:text-primary">

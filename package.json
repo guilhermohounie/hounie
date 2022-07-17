@@ -13,7 +13,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
-    "prettier": "npx prettier --write ."
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "framer-motion": "^6.3.11",

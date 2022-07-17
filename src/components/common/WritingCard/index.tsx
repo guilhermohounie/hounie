@@ -10,7 +10,13 @@ export const WritingCard: FC<WritingCardProps> = ({ writing }) => {
   const { title, description, date, slug } = writing;
   return (
     <li className="p-4 border-l-2 border-white border-dashed">
-      <span className="text-sm text-gray-600">{date}</span>
+      <span className="text-sm text-gray-600">
+        {new Date(date).toLocaleDateString("en-US", {
+          month: "long",
+          year: "numeric",
+          day: "numeric",
+        })}
+      </span>
       <h4>
         <NextLink href={`/writings/${slug}`} className="underline">
           {title}
