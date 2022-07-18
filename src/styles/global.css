@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: "Lora";
-  src: url("/assets/fonts/Lora-Regular.ttf") format("ttf");
-  font-weight: 400 700;
+  src: url("/assets/fonts/Lora/Lora-Regular.ttf");
+  font-weight: 400 800;
 }
 
 * {
