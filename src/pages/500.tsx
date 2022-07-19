@@ -1,7 +1,7 @@
 import { Page } from "@/components/common/Page";
-import type { FC } from "react";
+import type { NextPage } from "next";
 
-const NotFoundPage: FC = () => {
+const NotFoundPage: NextPage = () => {
   return (
     <Page title="The server died.">
       <main>

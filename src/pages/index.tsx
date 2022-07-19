@@ -1,14 +1,12 @@
+import { Logo } from "@/components/common/Logo";
 import { Page } from "@/components/common/Page";
 import type { NextPage } from "next";
-import Image from "next/image";
 
 const IndexPage: NextPage = () => {
   return (
     <Page title="Guilhermo Hounie">
       <main className="flex flex-col gap-8">
-        <div>
-          <Image src="/assets/media/logo.svg" alt="Hounie's logo" height={100} width={100} />
-        </div>
+        <Logo size={100} color="#CDA653" />
         <h2>Guilhermo Hounie</h2>
         <div className="grid gap-4">
           <p>

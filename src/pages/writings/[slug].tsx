@@ -1,10 +1,10 @@
 import { Page } from "@/components/common/Page";
 import { getAllWritings, getWriting } from "@/lib/mdx";
 import { WritingMetadata } from "@/types/mdx";
+import type { NextPage } from "next";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import type { FC } from "react";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const writings = getAllWritings();
@@ -42,7 +42,7 @@ interface WritingPageProps {
   };
 }
 
-const WritingPage: FC<WritingPageProps> = ({ writing }) => {
+const WritingPage: NextPage<WritingPageProps> = ({ writing }) => {
   const { content, date, description, title } = writing;
 
   return (
