@@ -2,13 +2,6 @@
 @tailwind base;
 @tailwind components;
 
-@font-face {
-  font-family: "Lora";
-  src: url("/assets/fonts/Lora/Lora.ttf");
-  font-weight: 300 800;
-  font-display: swap;
-}
-
 * {
   @apply selection:bg-primary selection:text-black;
 }
