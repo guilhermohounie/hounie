@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://www.hounie.me
+
+# Sitemaps
+Sitemap: https://www.hounie.me/sitemap.xml
