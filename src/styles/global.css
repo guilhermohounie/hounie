@@ -6,7 +6,7 @@
   font-family: "Lora";
   src: url("/assets/fonts/Lora/Lora.ttf");
   font-weight: 300 800;
-  font-display: optional;
+  font-display: swap;
 }
 
 * {

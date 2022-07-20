@@ -9,7 +9,11 @@ const ProjectsPage: NextPage = () => {
       <main className="py-8">
         <ul className="grid gap-8 md:grid-cols-2">
           {projects.map((entry) => {
-            return <Project {...entry} key={entry.name} />;
+            return (
+              <li key={entry.name}>
+                <Project {...entry} />
+              </li>
+            );
           })}
         </ul>
       </main>

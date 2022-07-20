@@ -1,49 +1,37 @@
 import { Page } from "@/components/common/Page";
-import { getAllWritings, getWriting } from "@/lib/mdx";
-import { WritingMetadata } from "@/types/mdx";
+import { allWritings, Writing } from "@/contentlayer/generated";
+import { formatDate } from "@/lib/date";
 import type { NextPage } from "next";
-import { GetStaticPaths, GetStaticProps } from "next";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { serialize } from "next-mdx-remote/serialize";
+import { GetStaticProps } from "next";
+import { useMDXComponent } from "next-contentlayer/hooks";
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const writings = getAllWritings();
+export async function getStaticPaths() {
+  const paths = allWritings.map((writing) => writing.slug);
 
   return {
-    paths: writings.map((writing) => {
-      return {
-        params: {
-          slug: writing.slug,
-        },
-      };
-    }),
+    paths,
     fallback: false,
   };
-};
+}
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const writing = getWriting(params!.slug as string);
-
-  const content = await serialize(writing.content, {});
+  const writing = allWritings.find((writing) => writing.slug === `/writings/${params!.slug}`);
 
   return {
     props: {
-      writing: {
-        ...writing,
-        content,
-      },
+      writing,
     },
   };
 };
 
 interface WritingPageProps {
-  writing: WritingMetadata & {
-    content: MDXRemoteSerializeResult<Record<string, unknown>>;
-  };
+  writing: Writing;
 }
 
 const WritingPage: NextPage<WritingPageProps> = ({ writing }) => {
-  const { content, date, description, title } = writing;
+  const { date, description, title } = writing;
+
+  const MDXComponent = useMDXComponent(writing.body.code);
 
   return (
     <Page
@@ -56,17 +44,11 @@ const WritingPage: NextPage<WritingPageProps> = ({ writing }) => {
       }}
     >
       <div>
-        <span className="text-sm text-gray-600">
-          {new Date(date).toLocaleDateString("en-US", {
-            month: "long",
-            year: "numeric",
-            day: "numeric",
-          })}
-        </span>
+        <span className="text-sm text-gray-600">{formatDate(date)}</span>
         <h1 className="mt-2 mb-1">{writing.title}</h1>
       </div>
       <article className="!max-w-full mt-12 prose prose-invert prose-headings:text-primary prose-a:text-primary">
-        <MDXRemote {...content} />
+        <MDXComponent />
       </article>
     </Page>
   );

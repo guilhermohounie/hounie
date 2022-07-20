@@ -1,28 +1,23 @@
-import { WritingMetadata } from "@/types/mdx";
+import { Writing } from ".contentlayer/generated/types";
+import { formatDate } from "@/lib/date";
 import NextLink from "next/link";
 import type { FC } from "react";
 
 interface WritingCardProps {
-  writing: WritingMetadata;
+  writing: Writing;
 }
 
 export const WritingCard: FC<WritingCardProps> = ({ writing }) => {
   const { title, description, date, slug } = writing;
   return (
-    <li className="p-4 border-l-2 border-white border-dashed">
-      <span className="text-sm text-gray-600">
-        {new Date(date).toLocaleDateString("en-US", {
-          month: "long",
-          year: "numeric",
-          day: "numeric",
-        })}
-      </span>
+    <div className="p-4 border-l-2 border-white border-dashed">
+      <span className="text-sm text-gray-600">{formatDate(date)}</span>
       <h4>
-        <NextLink href={`/writings/${slug}`} className="underline">
+        <NextLink href={slug} className="underline">
           {title}
         </NextLink>
       </h4>
       <p>{description}</p>
-    </li>
+    </div>
   );
 };

@@ -9,7 +9,11 @@ const DictionaryPage: NextPage = () => {
       <main className="py-8">
         <ul className="grid gap-8 md:grid-cols-2">
           {dictionary.map((entry) => {
-            return <Word {...entry} key={entry.word} />;
+            return (
+              <li key={entry.word}>
+                <Word {...entry} />
+              </li>
+            );
           })}
         </ul>
       </main>
