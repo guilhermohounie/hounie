@@ -5,12 +5,14 @@ const Document: FC<DocumentProps> = () => {
   return (
     <Html dir="ltr" lang="en">
       <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          rel="preload"
-          href="/fonts/Lora/Lora.ttf"
-          as="font"
-          type="font/ttf"
-          crossOrigin="anonymous"
+          href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        <meta
+          name="keywords"
+          content="sites,blog,e-commerce,agência digital, web, programação"
         />
       </Head>
       <body>
