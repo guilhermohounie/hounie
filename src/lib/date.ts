@@ -3,5 +3,6 @@ export function formatDate(date: Date | string) {
     month: "long",
     year: "numeric",
     day: "numeric",
+    weekday: "short",
   });
 }
